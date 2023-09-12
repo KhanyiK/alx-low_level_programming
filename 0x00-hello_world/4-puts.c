@@ -1,7 +1,8 @@
-#include <stdio,h>
+#include <stdio.h>
 /**
- *main - C program
- *Return: 0
+ *main - entry
+ *
+ *Return: always 0(sucess)
 */
 int main(void)
 {
