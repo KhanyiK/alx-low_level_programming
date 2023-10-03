@@ -5,7 +5,7 @@
   * @src: the string
   * Return: string
   */
-char *_strcpy(char dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int x = 0;
 	int y = 0;
