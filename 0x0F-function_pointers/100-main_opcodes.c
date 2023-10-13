@@ -14,14 +14,14 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("error\n");
+		printf("Error\n");
 		exit(1);
 	}
 	b = atoi(argv[1]);
 
 	if (b < 0)
 	{
-		printf("error\n");
+		printf("Error\n");
 		exit(2);
 	}
 	arr = (char *)main;
