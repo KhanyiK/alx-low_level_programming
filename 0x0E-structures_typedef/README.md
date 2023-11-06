@@ -1,1 +1,1 @@
-on structures typedef
+structures typedef in c
