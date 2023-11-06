@@ -1,1 +1,1 @@
-dive into c preprocessor
+preprocessor in c
