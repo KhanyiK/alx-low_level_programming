@@ -2,14 +2,14 @@
 #include "function_pointers.h"
 #include <stdio.h>
 /**
-  * main - prints opcodes its own opcodes
+  * main - prints opcodes of main function
   * @argc: arguments
   * @argv: array
   * Return: 0
   */
 int main(int argc, char *argv[])
 {
-	int b, x;
+	int a, b;
 	int (*address)(int, char **) =  main;
 	unsigned char opcode;
 
@@ -20,18 +20,18 @@ int main(int argc, char *argv[])
 	}
 	b = atoi(argv[1]);
 
-	if (b < 0)
+	if (a < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	for (x = 0; x < b; x++)
+	for (b = 0; b < a; b++)
 	{
 		opcode = *(unsigned char *)address;
 		printf("%.2x", opcode);
 
-		if (x == b - 1)
+		if (b == a - 1)
 			continue;
 		printf(" ");
 		address++;

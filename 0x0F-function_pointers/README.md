@@ -1,1 +1,1 @@
-on C function pointers
+function pointers in c
