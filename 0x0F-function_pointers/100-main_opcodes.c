@@ -2,40 +2,46 @@
 #include "function_pointers.h"
 #include <stdio.h>
 /**
+ * print_opcodes - prints opcodes
+ * @a: addres
+ * @n: num of bytes
+ * Return: void
+ */
+void print_opcodes(char *a, int n)
+{
+	int y;
+
+	for (y = 0; y < n; y++)
+	{
+		printf("%.2hhx", a[y]);
+		if (y < n - 1)
+			printf(" ");
+	}
+	printf("\n");
+}
+/**
   * main - prints opcodes of main function
   * @argc: arguments
   * @argv: array
   * Return: 0
   */
-int main(int argc, char *argv[])
+int main(int argc, char *
+		*argv)
 {
-	int a, b;
-	int (*address)(int, char **) =  main;
-	unsigned char opcode;
+	int x;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	b = atoi(argv[1]);
+	x = atoi(argv[1]);
 
-	if (a < 0)
+	if (x < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-
-	for (b = 0; b < a; b++)
-	{
-		opcode = *(unsigned char *)address;
-		printf("%.2x", opcode);
-
-		if (b == a - 1)
-			continue;
-		printf(" ");
-		address++;
-	}
-	printf("\n");
+	print_opcodes((char *)&main, x);
 	return (0);
 }
