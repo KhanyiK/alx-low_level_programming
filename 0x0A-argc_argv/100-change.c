@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 		printf("Errror\n");
 		return (1);
 	}
-	x = strtol(argv[1], &p, 10);
+	x = strtol(argv[1], &z, 10);
 	answer = 0;
 
 	if (!*z)
