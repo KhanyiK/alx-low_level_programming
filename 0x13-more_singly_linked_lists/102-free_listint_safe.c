@@ -10,7 +10,9 @@ size_t free_listint_safe(listint_t **h)
 	int z;
 	listint_t *y;
 
-	if (!h || *h)
+	if (!h || !*h)
+		return(0);
+	while (*h)
 	{
 		z = *h - (*h)->next;
 
